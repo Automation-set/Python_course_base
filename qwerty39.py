@@ -1,4 +1,5 @@
 x = []
+y = 0
 end = ''
 while True:
     if end == 'end':
@@ -7,11 +8,18 @@ while True:
         if j == ['end']:
             end += 'end'
             break
-        for i in j:
+        x += [[int(i) for i in j]]
+
+for i in range(len(x)):
+    for j in range(i):
+        if i == j:
+            y += x[i][i+1] + x[i][i-1] + x[j+1][j] + x[j+1][j-1]
 
 
-        # x += [j]
-print(x)
+
+
+
+print(x, y)
 
 # x = [int(i) for i in input().split()]
 # y = [int(i) for i in input().split()]
@@ -21,7 +29,9 @@ print(x)
 # for i in range(len(x)+1):
 #     for j in range(len(y)+1):
 #
-#
+# 9 5 3
+# 0 7 -1
+# -5 2 -9
 #
 #
 #
