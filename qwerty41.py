@@ -9,7 +9,9 @@
 # m = min2(min2(33, 67), 45)
 # print(m)
 
-def f(n):
-    return n * 10 + 5
+# def f(n):
+#     return n * 10 + 5
+#
+# print(f(f(f(10))))
 
-print(f(f(f(10))))
+ 
