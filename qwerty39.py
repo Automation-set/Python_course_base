@@ -1,4 +1,5 @@
 x = []
+y = 0
 end = ''
 while True:
     if end == 'end':
@@ -10,17 +11,29 @@ while True:
         x += [[int(i) for i in j]]
 
 for i in range(len(x)):
-    for j in range(len(x[i])):
-        print(x[i][j-1] + x[i][-len(x[i])+j+1] + x[i-1][j] + x[i-len(x)+1][j], end=' ')
-    print()
+    for j in range(i):
+        if i == j:
+            y += x[i][i+1] + x[i][i-1] + x[j+1][j] + x[j+1][j-1]
 
-# Решение других:
-# a = input()
-# b = []
-# while a != 'end':
-#     b += [[int(i) for i in a.split()]]
-#     a = input()
-# for i in range(len(b)):
-#     for j in range(len(b[0])):
-#         print(b[(i-1)%len(b)][j] + b[(i+1)%len(b)][j] + b[i][(j-1)%len(b[0])] + b[i][(j+1)%len(b[0])], end=' ');
-#     print()
+
+
+
+
+print(x, y)
+
+# x = [int(i) for i in input().split()]
+# y = [int(i) for i in input().split()]
+# z = [int(i) for i in input().split()]
+# end = input()
+#
+# for i in range(len(x)+1):
+#     for j in range(len(y)+1):
+#
+# 9 5 3
+# 0 7 -1
+# -5 2 -9
+#
+#
+#
+# a = [[9, 5, 3], [0, 7, -1], [-5, 2, 9]]
+

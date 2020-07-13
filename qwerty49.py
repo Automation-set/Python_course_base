@@ -8,7 +8,7 @@ with open('dataset_3363_4(2).txt', 'w') as text2:
             linex += 1
             s = line.strip().split(';')
             sm = (int(s[-1]) + int(s[-2]) + int(s[-3])) / 3
-            print(s[0], sm, file=text2)
+            print(sm, file=text2)
             x += int(s[-3])
             y += int(s[-2])
             z += int(s[-1])
